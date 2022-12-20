@@ -1,14 +1,16 @@
 # CYBORG 
-This repository houses data for the CyBorg paper under review in the IEEE Security and Privacy 2023 conference. 
+### This repository houses data for the CyBorg paper under review in the IEEE Security and Privacy 2023 conference. 
 
 More ease of review, our code are in either in jupiter notebooks or python code. 
 
 
 We organized as follows:
 
-SCADA Folder: Here you will find the python code used to perform the statistical (i.e., frequency and timing) analysis of SCADA physical-bound API calls (i.e., the WRITE and READ calls). There is a README in this folder that will describe how to use the provided code implementation to ingest the SCADA API traces to output the derivations outlined in the paper.  Due to the size of the input-data/All-API-Calls.CSV (826.97MB), which cannot be uploaded in git, we included a reduced size. Also, the output-data-traces/ScadaBR-Dependencies was split into 3 files, ScadaBR-Dependencies-1, ScadaBR-Dependencies-2, and ScadaBR-Dependencies-3, to fit into github. 
+## SCADA Folder: 
+Here you will find the python code used to perform the statistical (i.e., frequency and timing) analysis of SCADA physical-bound API calls (i.e., the WRITE and READ calls). There is a README in this folder that will describe how to use the provided code implementation to ingest the SCADA API traces to output the derivations outlined in the paper.  Due to the size of the input-data/All-API-Calls.CSV (826.97MB), which cannot be uploaded in git, we included a reduced size. Also, the output-data-traces/ScadaBR-Dependencies was split into 3 files, ScadaBR-Dependencies-1, ScadaBR-Dependencies-2, and ScadaBR-Dependencies-3, to fit into github. 
 
-PHYSICS Folder: Here, you will find our implementation of the Transformer-based Autoencoder. This is in a jupyter notebook format, which can be easily opened in Google colab online, using the chemical dosing level control process data, which can be found exclusively in the directory. 
+## PHYSICS Folder: 
+Here, you will find our implementation of the Transformer-based Autoencoder. This is in a jupyter notebook format, which can be easily opened in Google colab online, using the chemical dosing level control process data, which can be found exclusively in the directory. 
 
 Detailed Implementation Information (using the chemical dosing level control as example)
 
@@ -29,10 +31,12 @@ We train the model using the loss function which is used in most VAEs, the sum o
 
 In order to convert the reconstructions to binary predictions, we took a threshold of 0.75 quantile of the training loss, and if the reconstruction loss was greater than this threshold, we'd consider the data to be indicating an attack scenario. We performed several experiments with different thresholds and found that a threshold of 0.75 quantile was ideal.
 
-PLC Devices Analysis: Here you will find python scripts used to statically analyze the Actuator connections based on the Statement List (STL) and Function Block Diagrams (FBD)
+## PLC Devices Analysis: 
+Here you will find python scripts used to statically analyze the Actuator connections based on the Statement List (STL) and Function Block Diagrams (FBD)
 
 
-FACTORYIO: Here you will find information on our testbed setup based on the FactoryIO ICS physical process emulation environment. Ofcourse, FactoryIO can be downloaded and installed for free. 
+## FACTORYIO: 
+Here you will find information on our testbed setup based on the FactoryIO ICS physical process emulation environment. Ofcourse, FactoryIO can be downloaded and installed for free. 
 
 
 
